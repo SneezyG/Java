@@ -8,7 +8,7 @@ class TestTax{
   
   public static void main(String[] args) {
    FederalWorker workerA = new FederalWorker();
-   workerA.grossIncome = 500000;
+   workerA.grossIncome = 70000;
    
    double taxedIncome = workerA.incomeCalculator();
    double fedTaxedIncome = workerA.incomeCalculator(taxedIncome);
@@ -32,24 +32,29 @@ class Worker{
   final String nationality = "Nigeria";
   
   public double incomeCalculator() {
-    // this return the taxedincome
+    // this return the taxedincome.
+   
     if (grossIncome <= 30000) {
       return grossIncome;
     }
     else if (grossIncome > 30000 && grossIncome <= 60000) {
-      return grossIncome - (grossIncome * (5/100));
+      double tax = grossIncome * 0.05;
+      return grossIncome - tax;
     }
     else if (grossIncome > 60000 && grossIncome <= 100000) {
-      return grossIncome - (grossIncome * (7/100));
+      double tax = grossIncome * 0.07;
+      return grossIncome - tax;
     }
     else if (grossIncome > 100000 && grossIncome <= 500000) {
-      return grossIncome - (grossIncome * (9/100));
+      double tax = grossIncome * 0.09;
+      return grossIncome - tax;
     }
     else{
-      return grossIncome - (grossIncome * (15/100));
+      double tax = grossIncome * 0.15;
+      return grossIncome - tax;
     }
    
-  } 
+  }
   
 }
 
@@ -65,7 +70,8 @@ class FederalWorker extends Worker{
   public double incomeCalculator(double taxedIncome) {
     // this return the fedTaxedIncome.
     if (grossIncome > 100000) {
-      return taxedIncome - (taxedIncome * (5/100));
+      double tax = taxedIncome * 0.05;
+      return taxedIncome - tax;
     }
     else{
       return taxedIncome;
