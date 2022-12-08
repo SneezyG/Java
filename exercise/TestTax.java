@@ -1,4 +1,8 @@
 
+/*
+ Hard coding variables value in programs
+*/
+
 
 class TestTax{
   

@@ -1,4 +1,7 @@
 
+/*
+ supplying variables value to class instance and method through constructors.
+*/
 
 class TestTax{
   
