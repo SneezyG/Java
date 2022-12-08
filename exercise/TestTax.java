@@ -8,7 +8,7 @@ class TestTax{
   
   public static void main(String[] args) {
    FederalWorker workerA = new FederalWorker();
-   workerA.grossIncome = 70000;
+   workerA.grossIncome = 200000;
    
    double taxedIncome = workerA.incomeCalculator();
    double fedTaxedIncome = workerA.incomeCalculator(taxedIncome);
